@@ -39,7 +39,7 @@ global.wlcm  = process.env.WELCOME || process.env.CAN_WELCOME || "true";  // Mak
 
 global.warncount = process.env.WARN_COUNT || 3
 global.disablepm = process.env.DISABLE_PM || "false"
-global.disablegroup = process.env.DISABLE_GROUPS || "true", // disable bot in groups when public mode
+global.disablegroup = process.env.DISABLE_GROUPS || "false", // disable bot in groups when public mode
 
 global.MsgsInLog = process.env.MSGS_IN_LOG|| "false" // "true"  to see messages , "log" to show logs , "false" to hide logs messages
 global.userImages= process.env.USER_IMAGES || "text" // "text" // set Image/video urls here
@@ -69,7 +69,7 @@ module.exports = {
 
   menu: process.env.MENU || "", /**  Available @MENU @Schemes 1: Aztec_Md, 2: A17_Md, 3: Suhail-Md Default ---------- If Not Choose then it Randomely Pic One Of Them Each time **/
 
-  HANDLERS: process.env.PREFIX  || ",",
+  HANDLERS: process.env.PREFIX  || "",
   BRANCH  : process.env.BRANCH  || "main",
   VERSION : process.env.VERSION || "1.3.8",
   caption : global.caption || "" , // ```『 ᴘᴏᴡᴇʀᴇᴅ ʙʏ shellah²²¹-ᴍᴅ 』```", //*『sᴜʙsᴄʀɪʙᴇ • sᴜʜᴀɪʟ ᴛᴇᴄʜ』*\n youtube.com/@suhailtechinfo0"),
@@ -91,7 +91,7 @@ module.exports = {
   HEROKU: process.env.HEROKU_APP_NAME && process.env.HEROKU_API_KEY,
 
 
-  WORKTYPE: process.env.WORKTYPE || process.env.MODE|| "private",
+  WORKTYPE: process.env.WORKTYPE || process.env.MODE|| "public",
   LANG: ( process.env.THEME ||  "shellah"  ).toUpperCase(),
 
 
@@ -133,7 +133,7 @@ fs.watchFile(file, () => { fs.unwatchFile(file);console.log(`Update'${__filename
   //style : process.env.STYLE || "2",  // put '1' & "2" here to check bot styles
   //readmessage:process.env.READ_MESSAGE|| "false",
   //warncount: process.env.WARN_COUNT || 3,
-  //userImages:process.env.USER_IMAGES|| "text",  // SET IMAGE AND VIDEO URL FOR BOT MENUS 
+  //userImages:process.env.USER_IMAGES|| "shellah",  // SET IMAGE AND VIDEO URL FOR BOT MENUS 
   //disablepm: process.env.DISABLE_PM || "false",
   //MsgsInLog: process.env.MSGS_IN_LOG|| "false", // "true"  to see messages , "log" to open logs , "false" to hide logs messages
   //readcmds:process.env.READ_COMMANDS|| "false", 
